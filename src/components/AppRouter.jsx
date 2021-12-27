@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  BrowserRouter,
   BrowserRouter as Router,
   Redirect,
   Route,
@@ -17,7 +18,7 @@ import ResetPasswordPage from '../pages/ResetPasswordPage'
 
 export default function AppRouter(props) {
   return (
-    <>
+    <BrowserRouter basename={process.env.REACT_APP_AUTH_DOMAIN}>
       <Router>
         <Switch>
           <Route exact path='/' component={Homepage} />
@@ -37,7 +38,7 @@ export default function AppRouter(props) {
           <Route exact path='*' component={NotfoundPage} />
         </Switch>
       </Router>
-    </>
+    </BrowserRouter>
   )
 }
 
