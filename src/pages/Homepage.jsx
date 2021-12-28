@@ -19,45 +19,15 @@ export default function Homepage() {
 
   return (
     <Layout>
-      <Heading>Home page</Heading>
-      <Text my={6}>{`The current user is: ${currentUser}`}</Text>
-
       <Heading>
         Firebase Authentication
-        <chakra.span
-          fontWeight='black'
-          fontStyle='italic'
-          fontSize='9xl'
-          mx={2}
-        >
-          v9
-        </chakra.span>
-        <Badge
-          fontWeight='black'
-          fontSize='4xl'
-          mx={2}
-          px={2}
-          colorScheme='green'
-        >
-          NEW API
-        </Badge>
       </Heading>
       <OrderedList fontSize='3xl' my={4}>
-        <ListItem>Email password authentication (Register/Login)</ListItem>
-        <ListItem>Google Sign in</ListItem>
-        <ListItem>Forgot Password</ListItem>
-        <ListItem>Custom Reset password page</ListItem>
-        <ListItem>Protected routes</ListItem>
+        <ListItem>이메일 암호 인증(등록/로그인)</ListItem>
+        <ListItem>Google 로그인 기능</ListItem>
+        <ListItem>비밀번호 찾기 기능</ListItem>
+        <ListItem>사용자 정의 암호 재설정 페이지</ListItem>
         <ListItem>
-          <Code fontSize='inherit'> Redirect TO</Code> or Back (keeping the
-          state)
-        </ListItem>
-        <ListItem>
-          custom Auth Hook <Code fontSize='3xl'>useAuth()</Code>
-        </ListItem>
-        <ListItem>Loading indicators while sign-in/up</ListItem>
-        <ListItem>
-          Dark Mode enabled template using
           <Badge
             fontSize='inherit'
             colorScheme='teal'
@@ -67,6 +37,7 @@ export default function Homepage() {
           >
             Chakra UI
           </Badge>
+          를 활용한 다크 모드 템플릿
         </ListItem>
       </OrderedList>
       <Heading size='md' mt={20}>
@@ -74,10 +45,36 @@ export default function Homepage() {
       </Heading>
       <List>
         <ListItem>
-          <Link to='/reset-password'>reset page</Link>
+          <Link to='/reset-password'>
+            <Badge
+            fontWeight='black'
+            fontSize='4xl'
+            mx={2}
+            px={2}
+            colorScheme='green'
+            mt={4}
+            borderRadius='md'
+            >
+              reset page
+            </Badge>
+          </Link>
         </ListItem>
         <ListItem>
-          <Link to='/forgot-password'>forgot page</Link>
+          <Link to='/forgot-password'>
+            
+            <Badge
+              fontWeight='black'
+              fontSize='4xl'
+              mx={2}
+              px={2}
+              colorScheme='purple'
+              mt={4}
+              mb={20}
+              borderRadius='md'
+            >
+              forgot page
+            </Badge>  
+          </Link>
         </ListItem>
       </List>
     </Layout>
