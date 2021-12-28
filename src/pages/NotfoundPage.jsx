@@ -5,7 +5,7 @@ import { Layout } from '../components/Layout'
 export default function NotfoundPage() {
   return (
     <Layout>
-      <Heading>Not found page</Heading>
+      <Heading>로그인을 클릭하세요!</Heading>
     </Layout>
   )
 }
