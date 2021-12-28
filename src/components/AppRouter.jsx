@@ -18,7 +18,7 @@ import ResetPasswordPage from '../pages/ResetPasswordPage'
 
 export default function AppRouter(props) {
   return (
-    <BrowserRouter basename={process.env.REACT_APP_AUTH_DOMAIN}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Router>
         <Switch>
           <Route exact path='/' component={Homepage} />
